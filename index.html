@@ -1,0 +1,441 @@
+<!-- src/index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 웹페이지 설명 -->
+    <meta
+      name="description"
+      content="현가람의 포트폴리오 웹사이트입니다. 반응형 웹 디자인, 웹 퍼블리싱, 영상 편집 등 다양한 작업물을 확인하실 수 있습니다."
+    />
+    <!-- 웹페이지와 관련된 키워드를 정의 -->
+    <meta
+      name="keywords"
+      content="반응형, 웹퍼블리싱, 웹퍼블리셔, 영상, 멀티미디어, 영상편집, 포트폴리오, 웹디자인"
+    />
+    <!-- 검색 엔진 크롤링 설정 -->
+    <meta name="robots" content="index, follow" />
+    <!-- canonical URL -->
+    <link rel="canonical" href="" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 제목 -->
+    <meta property="og:title" content="Garam의 포트폴리오 웹사이트" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 표시되는 사이트 이름 -->
+    <meta property="og:site_name" content="Garam 웹사이트" />
+    <!-- 소셜 미디어에서 페이지가 웹사이트임을 명시 -->
+    <meta property="og:type" content="website" />
+    <!-- Open Graph 프로토콜에서 사용되는 메타 태그의 속성 중 하나로, 페이지의 간략한 설명을 제공하는 데 사용 -->
+    <!-- 소셜 미디어에서 공유될 때 사용되는 URL -->
+    <meta property="og:url" content="" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 표시되는 이미지 -->
+    <meta property="og:image" content="img/img-dummy2.png" />
+    <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 설명 -->
+    <meta
+      property="og:description"
+      content="Garam의 포트폴리오 웹사이트입니다. 반응형 웹 디자인, 웹 퍼블리싱, 영상 편집 등 다양한 작업물을 확인하실 수 있습니다."
+    />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="img/img-dummy2.png" />
+    <meta name="twitter:title" content="Garam의 포트폴리오 웹사이트" />
+    <meta
+      name="twitter:description"
+      content="Garam의 포트폴리오 웹사이트입니다. 반응형 웹 디자인, 웹 퍼블리싱, 영상 편집 등 다양한 작업물을 확인하실 수 있습니다."
+    />
+    <meta name="twitter:image" content="img/img-dummy2.png" />
+    <title>Hyun Garam Portfolio</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/script.js" defer></script>
+    <script src="js/modalScript.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/7c83a2e41f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav-left">
+        <button class="nav-btn about" onclick="changeContent('about')">
+          About
+        </button>
+      </div>
+      <h1 class="logo" onclick="resetHome()">Hyun Garam</h1>
+      <div class="nav-right">
+        <button class="nav-btn works" onclick="changeContent('works')">
+          Works
+        </button>
+        <button
+          class="nav-btn experiences"
+          onclick="changeContent('experiences')"
+        >
+          Experiences
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <div class="main-page">
+        <video class="wave-img" autoplay loop muted>
+          <source src="videos/PortfolioMainPage2.mp4" type="video/mp4" />
+        </video>
+        <p class="description">Welcome to my Portfolio</p>
+      </div>
+      <!-- 🟡 About Section -->
+      <section
+        id="about"
+        class="main-container scroll-container"
+        data-section="about"
+      >
+        <div class="about-container">
+          <div class="column-left">
+            <h2 class="main-name">HYUN.GARAM</h2>
+            <div class="profile-image">
+              <video autoplay loop muted>
+                <source src="videos/PortfolioMainPage2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p class="profile-desc">
+              조화롭게 스며드는<br />영상편집자 현가람입니다.
+            </p>
+          </div>
+          <div class="column-center">
+            <div class="info-box">
+              <h3>Introduce</h3>
+              <ul>
+                <li><strong>Name</strong> : 현가람</li>
+                <li><strong>Birth</strong> : 2001.06.22</li>
+                <li>
+                  <strong>Email</strong> :
+                  <button class="copy-btn" onclick="copyLink()">
+                    grf0607@gmail.com
+                  </button>
+                  <p class="copy-msg" id="copyMsg">복사완료! 😊</p>
+                </li>
+                <li>
+                  <strong>Contact</strong> :
+                  <a
+                    href="https://www.instagram.com/h_garam/profilecard/?igsh=bW56dDI1ZGdvOG9u"
+                    target="_blank"
+                  >
+                    <img
+                      class="linkIcon"
+                      src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1567008788/noticon/bqjhb6xvljt9viccy6lh.png"
+                      alt="instagram"
+                    />
+                  </a>
+                  <a href="https://open.kakao.com/o/sYU4NZoh" target="_blank">
+                    <img
+                      class="linkIcon"
+                      src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1611574965/noticon/iqg1rfbdbeaufcptuqgf.png"
+                      alt="kakao"
+                    />
+                  </a>
+                  <a
+                    href="https://unmarred-mozzarella-757.notion.site/19db429291ec803aa430e95375c5bbae?pvs=4"
+                    target="_blank"
+                  >
+                    <img
+                      class="linkIcon"
+                      src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1570106347/noticon/hx52ypkqqdzjdvd8iaid.svg"
+                      alt="notion"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="info-box">
+              <h3>Education</h3>
+              <ul>
+                <li><strong>2020</strong> : 대구혜화여자고등학교 졸업</li>
+                <li>
+                  <strong>2025</strong> : 영남대학교 미디어커뮤니케이션학과 졸업
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="column-right">
+            <div class="info-box">
+              <h3>Self interview</h3>
+              <p class="typing-question">
+                <strong>Q1. 나는 어떤 사람인가요?</strong>
+              </p>
+              <p class="typing-text" id="typing-q1"></p>
+              <p class="typing-question">
+                <strong>Q2. 영상편집자가 되고 싶은 이유는?</strong>
+              </p>
+              <p class="typing-text" id="typing-q2"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🟡 Works Section -->
+      <section
+        id="works"
+        class="main-container scroll-container"
+        data-section="works"
+        style="display: none"
+      >
+        <h2 class="works-title">Works</h2>
+        <div class="works-category">
+          <h3 class="category-name">Advertise</h3>
+          <div class="thumb-list">
+            <div class="thumb-item">
+              <img
+                class="project-image"
+                src="img/img-typo.png"
+                alt="Thumbnail"
+              />
+              <video
+                class="project-image preview-video"
+                muted
+                loop
+                preload="none"
+              >
+                <source src="videos/PortfolioMainPage2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="works-progress-bar"></div>
+              <p class="thumb-title">Main Title</p>
+            </div>
+            <div class="thumb-item">
+              <img
+                class="project-image"
+                src="img/img-typo.png"
+                alt="Thumbnail"
+              />
+              <video
+                class="project-image preview-video"
+                muted
+                loop
+                preload="none"
+              >
+                <source src="videos/PortfolioMainPage2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="works-progress-bar"></div>
+              <p class="thumb-title">Main Title</p>
+            </div>
+            <div class="thumb-item">
+              <img
+                class="project-image"
+                src="img/img-typo.png"
+                alt="Thumbnail"
+              />
+              <video
+                class="project-image preview-video"
+                muted
+                loop
+                preload="none"
+              >
+                <source src="videos/PortfolioMainPage2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="works-progress-bar"></div>
+              <p class="thumb-title">Main Title</p>
+            </div>
+          </div>
+        </div>
+        <ddiv class="works-category" data-category="motion-graphy">
+          <h3 class="category-name">Motion Graphy</h3>
+          <div class="project-block">
+            <div class="project-image-wrap thumb-item">
+              <img
+                class="project-image"
+                src="img/img-typo.png"
+                alt="Thumbnail"
+              />
+
+              <video
+                class="project-image preview-video"
+                muted
+                loop
+                preload="none"
+              >
+                <source src="videos/PortfolioMainPage2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="works-progress-bar"></div>
+            </div>
+            <div class="project-info">
+              <p class="project-sub">은하수로 프로젝트</p>
+              <h4 class="project-title">
+                <strong>Eunhasulo</strong> <span>Project</span>
+              </h4>
+              <p class="project-desc">
+                Lorem ipsum dolor sit amet consectetur. Dignissim massa
+                facilisis in lorem ut libero curabitur. Augue volutpat massa a
+                eu diam aliquet eget nisi in.
+              </p>
+            </div>
+          </div>
+          <div class="project-block">
+            <div class="project-image-wrap thumb-item">
+              <img
+                class="project-image"
+                src="img/img-typo.png"
+                alt="Thumbnail"
+              />
+              <video
+                class="project-image preview-video"
+                muted
+                loop
+                preload="none"
+              >
+                <source src="videos/PortfolioMainPage2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="works-progress-bar"></div>
+            </div>
+            <div class="project-info">
+              <p class="project-sub">은하수로 프로젝트</p>
+              <h4 class="project-title">
+                <strong>Eunhasulo</strong> <span>Project</span>
+              </h4>
+              <p class="project-desc">
+                Lorem ipsum dolor sit amet consectetur. Dignissim massa
+                facilisis in lorem ut libero curabitur. Augue volutpat massa a
+                eu diam aliquet eget nisi in.
+              </p>
+            </div>
+          </div>
+        </ddiv>
+      </section>
+
+      <!-- 🟡 Experiences Section -->
+      <section
+        id="experiences"
+        class="main-container scroll-container"
+        data-section="experiences"
+        style="display: none"
+      >
+        <h2 class="works-title">Experiences</h2>
+        <div class="works-category">
+          <h3 class="category-name">Project Experience</h3>
+          <div class="thumb-list">
+            <div class="thumb-item">
+              <img
+                class="project-image"
+                src="img/img-typo.png"
+                alt="Thumbnail"
+              />
+              <video
+                class="project-image preview-video"
+                muted
+                loop
+                preload="none"
+              >
+                <source src="videos/PortfolioMainPage2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="experiences-progress-bar"></div>
+              <p class="thumb-title">프로젝트 1</p>
+            </div>
+            <div class="thumb-item">
+              <img
+                class="project-image"
+                src="img/img-typo.png"
+                alt="Thumbnail"
+              />
+              <video
+                class="project-image preview-video"
+                muted
+                loop
+                preload="none"
+              >
+                <source src="videos/PortfolioMainPage2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="experiences-progress-bar"></div>
+              <p class="thumb-title">프로젝트 2</p>
+            </div>
+            <div class="thumb-item">
+              <img
+                class="project-image"
+                src="img/img-typo.png"
+                alt="Thumbnail"
+              />
+              <video
+                class="project-image preview-video"
+                muted
+                loop
+                preload="none"
+              >
+                <source src="videos/PortfolioMainPage2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="experiences-progress-bar"></div>
+              <p class="thumb-title">프로젝트 3</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Hyun Garam. All rights reserved.</p>
+    </footer>
+
+    <!-- 모달 구조 -->
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <div class="video-container">
+          <video id="modalVideo" controls>
+            <source src="" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="video-description">
+          <h3 id="videoTitle">Motion Graphy: 감성을 담은 비주얼 아트</h3>
+          <p id="videoDesc">
+            이번 영상은 <strong>감정과 스토리</strong>를 시각적으로 표현하기
+            위해 기획되었습니다. 색감과 움직임을 통해
+            <strong>감동과 몰입</strong>을 주는 모션 그래피를 목표로 했습니다.
+          </p>
+
+          <h4>💡 기획 의도</h4>
+          <p>
+            감정을 효과적으로 전달하기 위해
+            <strong>컬러 대비와 부드러운 모션</strong>을 활용했습니다. 시각적
+            흐름이 자연스럽게 이어지도록 스토리보드를 세밀하게 구성했습니다.
+          </p>
+          <h4>🎬 제작 과정</h4>
+          <p>
+            - 그래픽 디자인: 감정에 맞춘 색상과 움직임을 조합하여
+            <strong>감성 표현</strong> 강화<br />
+            - 편집 및 조정: 감정 변화에 따라 <strong>컷과 트랜지션</strong>을
+            자연스럽게 연결
+          </p>
+          <!-- <div class="slide-container">
+            <div class="slides">
+              <img
+                src="img/img-interview.png"
+                class="slide active"
+                alt="제작 과정 1"
+              />
+              <img
+                src="img/img-thumbnail1.jpg"
+                class="slide"
+                alt="제작 과정 2"
+              />
+              <img src="img/img-dummy1.png" class="slide" alt="제작 과정 3" />
+            </div>
+            <button class="slide-btn prev">⬅️</button>
+            <button class="slide-btn next">➡️</button>
+            <div class="slide-indicator">1 / 3</div>
+          </div> -->
+
+          <h4>🌟 감상 포인트</h4>
+          <p>
+            색채와 움직임의 변화에 주목하며, <strong>감정의 흐름</strong>을
+            느껴보세요. 시청자에게 <strong>감성적 영감</strong>을 주는 모션
+            그래피를 경험할 수 있습니다.
+          </p>
+        </div>
+
+        <span class="close-btn" onclick="closeModal()">✖️</span>
+      </div>
+    </div>
+  </body>
+</html>
