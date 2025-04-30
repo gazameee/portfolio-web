@@ -706,9 +706,15 @@
     <div id="videoModal" class="modal" style="display: none">
       <div class="modal-content">
         <div class="video-container">
-          <video id="modalVideo" controls style="display: block"></video>
+          <video
+            id="modalVideo"
+            playsinline
+            controls
+            style="display: block"
+          ></video>
           <iframe
             id="modalIframe"
+            playsinline
             frameborder="0"
             allow="autoplay; fullscreen"
             style="
