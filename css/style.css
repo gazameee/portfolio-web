@@ -14,7 +14,12 @@ header {
   padding-left: 30px;
   padding-right: 30px;
 }
-
+video.preview-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: transparent; /* 검은 배경 제거 */
+}
 /* 기본으로 숨겨진 상태 */
 .loader {
   position: absolute;
