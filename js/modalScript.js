@@ -53,12 +53,20 @@ function closeModal() {
   document.body.style.overflow = "auto";
 }
 
-window.addEventListener("click", (event) => {
-  const modal = document.getElementById("videoModal");
-  const modalContent = document.querySelector(".modal-content");
-  if (event.target === modal && !modalContent.contains(event.target)) {
-    closeModal();
-  }
+["click", "touchstart"].forEach((evt) => {
+  document.addEventListener(evt, (event) => {
+    const modal = document.getElementById("videoModal");
+    const modalContent = document.querySelector(".modal-content");
+
+    // 모달이 보이고 있고, 클릭한 곳이 modalContent 영역이 아니면 닫기
+    if (
+      modal &&
+      modal.style.display === "flex" &&
+      !modalContent.contains(event.target)
+    ) {
+      closeModal();
+    }
+  });
 });
 
 // ✅ ESC 키로 모달 닫기
