@@ -7,7 +7,7 @@ function changeContent(section) {
       loader.classList.add("hidden");
       // 실제 콘텐츠 변경 함수 실행
       showWorksContent();
-    }, 2000); // 2초 후 로딩 완료 가정
+    }, 1500); // 2초 후 로딩 완료 가정
   } else {
     showOtherSection(section);
   }
