@@ -58,11 +58,12 @@ function closeModal() {
     const modal = document.getElementById("videoModal");
     const modalContent = document.querySelector(".modal-content");
 
-    // 모달이 보이고 있고, 클릭한 곳이 modalContent 영역이 아니면 닫기
+    // 모달이 보이고 있고, 클릭한 요소가 모달 안이 아니고, 모달 자체도 아닐 때만 닫기
     if (
       modal &&
       modal.style.display === "flex" &&
-      !modalContent.contains(event.target)
+      !modalContent.contains(event.target) &&
+      !event.target.closest(".thumb-item") // 썸네일 클릭은 무시
     ) {
       closeModal();
     }
