@@ -249,6 +249,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+const video = item.querySelector("video");
+const videoSrc = item.querySelector("source")?.src;
+
+if (videoSrc && video) {
+  const posterPath = videoSrc.replace(/\\.mp4$/, ".png");
+  video.setAttribute("poster", posterPath);
+
+  video.style.display = "none";
+  video.addEventListener("loadeddata", () => {
+    video.style.display = "block";
+  });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const thumbItems = document.querySelectorAll(".thumb-item");
