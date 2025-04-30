@@ -17,13 +17,15 @@ function openModal(videoSrc, title, descHtml, isYouTube = false) {
     modalVideo.style.display = "none";
 
     modalIframe.style.display = "block";
-    modalIframe.src = `https://www.youtube.com/embed/${videoSrc}?autoplay=1&mute=1&rel=0&modestbranding=1&controls=1`;
+    modalIframe.src = `https://www.youtube.com/embed/${videoSrc}?autoplay=1&mute=1&rel=0&modestbranding=1&controls=1&playsinline=1`;
   } else {
     // ✅ 일반 mp4 영상 처리
     modalIframe.src = "";
     modalIframe.style.display = "none";
 
     modalVideo.style.display = "block";
+    modalVideo.setAttribute("playsinline", true); // ✅ 자동 전체화면 방지
+    modalVideo.setAttribute("webkit-playsinline", true); // ✅ iOS 대응
     modalVideo.src = videoSrc;
     modalVideo.loop = true;
     modalVideo.play();
