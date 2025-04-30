@@ -1,4 +1,17 @@
-// src/js/script.js
+function changeContent(section) {
+  if (section === "works") {
+    const loader = document.getElementById("worksLoader");
+    loader.classList.remove("hidden");
+
+    setTimeout(() => {
+      loader.classList.add("hidden");
+      // 실제 콘텐츠 변경 함수 실행
+      showWorksContent();
+    }, 2000); // 2초 후 로딩 완료 가정
+  } else {
+    showOtherSection(section);
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   showMainPage(); // ✅ 초기 화면을 메인 페이지로 설정

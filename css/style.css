@@ -31,6 +31,50 @@ header {
   opacity: 0; /* 기본은 안 보이게 */
   transition: opacity 0.3s ease; /* 부드럽게 */
 }
+.mainLoader {
+  display: inline-grid;
+  padding: 5px;
+  background: #fff;
+  filter: blur(4px) contrast(12);
+}
+.mainLoader:before {
+  content: "";
+  height: 40px;
+  aspect-ratio: 3;
+  --c: #0000 64%, #000 66% 98%, #0000 101%;
+  background: radial-gradient(35% 146% at 50% 159%, var(--c)) 0 0,
+    radial-gradient(35% 146% at 50% -59%, var(--c)) 100% 100%;
+  background-size: calc(200% / 3) 50%;
+  background-repeat: repeat-x;
+  animation: l11 0.8s infinite linear;
+}
+.works-loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem;
+  backdrop-filter: blur(3px);
+}
+
+.works-loader-overlay.hidden {
+  display: none;
+}
+
+@keyframes l11 {
+  to {
+    background-position: -200% 0, -100% 100%;
+  }
+}
 
 /* thumb-item에 마우스를 올렸을 때만 보이게 */
 .thumb-item:hover .loader {
@@ -688,6 +732,7 @@ main {
     height: 35px;
     padding: 10px 15px;
     font-size: 0.9rem;
+    color: #000000;
   }
   .logo {
     position: static;
